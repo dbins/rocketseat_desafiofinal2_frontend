@@ -1,68 +1,68 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Desafio Final 2 RocketSeat - Frontend
 
-## Available Scripts
+![Frontend](imagens/frontend.png)
 
-In the project directory, you can run:
+Nesse desafio foi construida uma aplicação completa envolvendo back-end com NodeJS, front-end com ReactJS e mobile com React Native.
 
-### `npm start`
+A aplicação consiste em um app de controle de pedidos por delivery de uma pizzaria. O aplicativo móvel será utilizado pelos clientes da pizzaria para realizar pedidos e a versão web será utilizada para controle e registro dos pedidos realizados.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A versão web da aplicação será utilizada apenas para monitorar os pedidos conforme forem chegando e não terá versão para o cliente fazer pedido, apenas para administradores consultarem os pedidos já feitos.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+O administrador vai listar os pedidos que ainda estão pendentes, podendo ter a opção de excluir o pedido ou marcar como pago.
 
-### `npm test`
+No front-end da aplicação foi utilizado o create-react-app, estilização
+através de Styled Components, Redux, Redux Saga.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O desafio Backend, que consiste em criar a mesma API, também foi feito, ele pode ser visto neste link:
 
-### `npm run build`
+https://github.com/dbins/rocketseat_desafiofinal2_backend
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O desafio Mobile, que consiste em criar um aplicativo que vai alimentar os pedidos consultados por este frontend, pode ser visto neste link:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+https://github.com/dbins/rocketseat_desafiofinal2_mobile
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Instalação
 
-### `npm run eject`
+- git clone https://github.com/dbins/rocketseat_desafiofinal2_frontend
+- npm install
+- Iniciar a API. 
+- Altere o arquivo .env na raiz do projeto, informado o IP onde está rodando a API e o IP onde vai rodar este site.
+- Iniciar a aplicação digitando npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Scripts incluídos nesta aplicação
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### npm start
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Para iniciar a aplicação em modo de desenvolvimento
 
-## Learn More
+### npm run build
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para gerar a versão em modo de produção, dentro da pasta Build localizada na raiz do projeto é criada a versão para colocar no ar.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### npm run test
 
-### Code Splitting
+Para testes unitários em modo de desenvolvimento. Para os testes é utilzada a biblioteca Enzyme
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Rotas da API
 
-### Analyzing the Bundle Size
+A documentação da API pode ser consultada na página api.html localizada na raiz do projeto backend. Abaixo segue um resumo das rotas utilizadas pelo frontend:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+| Rota        | Método | Descrição                            |
+| ----------- | ------ | ------------------------------------ |
+| /login      | POST   | Login do administrador               |
+| /orders     | GET    | Lista pedidos feitos pelo aplicativo |
+| /orders/:id | DELETE | Excluir um pedido                    |
+| /orders/:id | PUT    | Marcar o pedido como pago            |
 
-### Making a Progressive Web App
+Para ativar a API, consulte o arquivo readme.md do repositório backend
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## RECURSOS UTILIZADOS
 
-### Advanced Configuration
+* Axios
+* Redux
+* Saga
+* Styled Components
+* Links restritos
+* ReactoTron
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
