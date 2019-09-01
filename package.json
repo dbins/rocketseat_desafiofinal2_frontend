@@ -43,5 +43,12 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://192.168.0.100:3333/"
+  "proxy": "http://192.168.0.100:3333/",
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "prettier": "^1.18.2"
+  }
 }

@@ -25,7 +25,7 @@ https://github.com/dbins/rocketseat_desafiofinal2_mobile
 
 - git clone https://github.com/dbins/rocketseat_desafiofinal2_frontend
 - npm install
-- Iniciar a API. 
+- Iniciar a API.
 - Altere o arquivo .env na raiz do projeto, informado o IP onde está rodando a API e o IP onde vai rodar este site.
 - Iniciar a aplicação digitando npm start
 
@@ -65,4 +65,37 @@ Para ativar a API, consulte o arquivo readme.md do repositório backend
 * Styled Components
 * Links restritos
 * ReactoTron
+
+## Configurações React JS
+
+### ESLINT
+
+O ESLint é uma ferramenta de lint plugável para JavaScript e JSX
+
+npm install eslint --save-dev
+npx eslint --init
+
+### Prettier
+O Prettier atualiza seu código automaticamente seguindo os padrões que você quiser toda vez salva o arquivo;
+
+npm install --save-dev --save-exact prettier
+
+Instalação integração Prettier com ESlint
+npm install --save-dev eslint-plugin-prettier
+npm install --save-dev eslint-config-prettier
+
+npm install --save-dev prettier eslint-config-prettier eslint-plugin-prettier
+
+### Editor Config
+O EditorConfig é um formatador de arquivos e coleções em forma de Plugin para Editores de código/texto com o objetivo de manter um padrão de código consistente entre diferentes editores, IDE's ou ambientes;
+
+### Configurações
+
+As configurações destes 3 recursos ficam disponíveis na raiz do projeto.
+
+.editorconfig - Arquivo destinado à configuração do plugin Editor Config, que padroniza algumas configurações para o editor em diferentes ambientes;
+
+.eslintrc.js - Arquivo de configuração do ESLint, é nele que são inseridas as regras e configurações de Linting do projeto
+
+.babelrc - Arquivo de configuração do Babel, é nele que é configurado o Babel Plugin Root Import para aceitar imports absolutos na aplicação usando o diretório src como raiz;
 
